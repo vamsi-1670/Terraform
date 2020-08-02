@@ -19,7 +19,7 @@ resource "aws_vpc" "main" {
 }
 ## Resource to provision Subnet
 resource "aws_subnet" "main" {
-  vpc_id     = "${aws_vpc.main.id}"
+  vpc_id     = "aws_vpc.main.id"
   cidr_block = "192.168.0.0/24"
   tags = {
     Name = "test-subnet"
@@ -29,7 +29,7 @@ resource "aws_subnet" "main" {
 resource "aws_security_group" "main" {
   name = "test-SG"
   description = "Allow inbound traffic"
-  vpc_id = "${aws_vpc.main.id}"
+  vpc_id = "aws_vpc.main.id"
   ingress {
     description = "SSH_ACESS"
     from_port = 22
@@ -54,9 +54,9 @@ resource "aws_security_group" "main" {
 resource "aws_instance" "web" {
   ami           = "ami-0d1cd67c26f5fca19"
   instance_type = "t2.micro"
-  key_name = "${aws_key_pair.deployer-key.key_name}"
-  security_groups = ["${aws_security_group.main.id}"]
-  subnet_id = "${aws_subnet.main.id}"
+  key_name = "aws_key_pair.deployer-key.key_name"
+  security_groups = ["aws_security_group.main.id"]
+  subnet_id = "$aws_subnet.main.id"
    tags {
       Name = "Test-AMI"
        }
