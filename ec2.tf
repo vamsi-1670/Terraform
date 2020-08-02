@@ -1,7 +1,7 @@
 
 provider "aws" {
-  access_key = "${var.AWS_ACCESS_KEY}"
-  secret_key = "${var.AWS_SECRET_KEY}"
+  access_key = "AKIA35K4OV7XD2HWZUTO"
+  secret_key = "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"
   region = "us-west-2"
 }
 ## Resource to provision public key
