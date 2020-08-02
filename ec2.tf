@@ -51,7 +51,7 @@ resource "aws_security_group" "main" {
 
 }
 ## Resource to provision ec2 instance
-resource "aws_instance" test {
+resource "aws_instance" "example" {
   ami = "ami-0d1cd67c26f5fca19"
   instance_type = "t2.micro"
   key_name = "aws_key_pair.deployer-key.key_name"
