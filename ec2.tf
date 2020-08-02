@@ -56,7 +56,7 @@ resource "aws_instance" "web" {
   instance_type = "t2.micro"
   key_name = "aws_key_pair.deployer-key.key_name"
   security_groups = ["aws_security_group.main.id"]
-  subnet_id = "$aws_subnet.main.id"
+  subnet_id = "aws_subnet.main.id"
    tags {
       Name = "Test-AMI"
        }
