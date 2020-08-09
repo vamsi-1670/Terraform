@@ -1,7 +1,7 @@
 
 provider "aws" {
-  access_key = "<access_key_here>"
-  secret_key = "<secret_key_here>"
+  access_key = "AKIA35K4OV7XFP24ZRXQ"
+  secret_key = "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"
   region = "us-west-2"
 }
 ## Resource to provision public key
