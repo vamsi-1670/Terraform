@@ -45,8 +45,8 @@ resource "aws_security_group" "main" {
 resource "aws_instance" "main" {
   ami = "ami-0d1cd67c26f5fca19"
   instance_type = "t2.micro"
-  key_name = "aws_key_pair.deployer-key.key_name"
-  security_groups = ["aws_security_group.main.id"
+  key_name = "${aws_key_pair.deployer-key.key_name}"
+  security_groups = ["aws_security_group.main.id"]
   subnet_id = "aws_subnet.main.id"
   
 }
