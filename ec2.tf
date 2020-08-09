@@ -9,8 +9,8 @@ provider "aws" {
 ## Resource to provision public key
 resource "aws_key_pair" "deployer-key" {
   key_name   = "deployer-key"
-  public_key = "<public-key to connect to ec2 instance>"
-                 this key is generated using "#ssh-keygen"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDhSRwfUqIoUqp6F6L8uRSws1cqU1Vpe2L0qZ7IXuGDSFeXiNstL+3ovP3QvDPVMMuEcXu+TJcGebKx6grtabKA93sdiYmQKD8iBZ5Q+5m0IaR45SSoa6jgq09Tust4uZIl5Blx6yQWg8dLSGxjAVqetTN1k2ksG+WJqb0QpqBb4SnQgrgSCEOS0BqNnCnEySawjYrbn4A/7WKJMWRwOUiM3Mmf84mIt85cGR3qdqHT8jGqZRdpjLfCu1qxQmun7yCvIUZZqiajaLxyVHnhtS72xBNZpp7ArFnIn3RdGEWBC1HlMg0P8VBCa7d47RTHJMqkVFqA1EHpDrmlLpljhyUT root@vagrant"
+                 ##this key is generated using "#ssh-keygen"
 }
 ## Resource to provision VPC 
 resource "aws_vpc" "main" {
