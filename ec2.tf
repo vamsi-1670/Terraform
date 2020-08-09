@@ -1,13 +1,13 @@
 
 provider "aws" {
-  access_key = "AKIA35K4OV7XDOVMRK5Q"
-  secret_key = "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"
+  access_key = "<AWS_ACCESS_KEY>"
+  secret_key = "AWS_SECRET_KEY"
   region = "us-west-2"
 }
 ### Resource to provision public key
 resource "aws_key_pair" "deployer-key" {
  key_name   = "deployer-key"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDhSRwfUqIoUqp6F6L8uRSws1cqU1Vpe2L0qZ7IXuGDSFeXiNstL+3ovP3QvDPVMMuEcXu+TJcGebKx6grtabKA93sdiYmQKD8iBZ5Q+5m0IaR45SSoa6jgq09Tust4uZIl5Blx6yQWg8dLSGxjAVqetTN1k2ksG+WJqb0QpqBb4SnQgrgSCEOS0BqNnCnEySawjYrbn4A/7WKJMWRwOUiM3Mmf84mIt85cGR3qdqHT8jGqZRdpjLfCu1qxQmun7yCvIUZZqiajaLxyVHnhtS72xBNZpp7ArFnIn3RdGEWBC1HlMg0P8VBCa7d47RTHJMqkVFqA1EHpDrmlLpljhyUT root@vagrant"
+  public_key = "<SSH_KEY_HERE>"
   }
 ### Resource to provision VPC 
 resource "aws_vpc" "main" {
