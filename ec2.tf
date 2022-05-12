@@ -1,11 +1,18 @@
-variable "AWS_ACCESS_KEY" {}
-variable "AWS_SECRET_KEY" {}
+###variable "AWS_ACCESS_KEY" {}
+###variable "AWS_SECRET_KEY" {}
+
+##provider "aws" {
+ ## access_key = "${var.AWS_ACCESS_KEY}"
+ ## secret_key = "${var.AWS_SECRET_KEY}"
+##  region = "us-west-2"
+##}
 
 provider "aws" {
-  access_key = "${var.AWS_ACCESS_KEY}"
-  secret_key = "${var.AWS_SECRET_KEY}"
-  region = "us-west-2"
+  access_key = "AKIATYJ2LRBUDYX3LF6B"
+  secret_key = "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"
+  region = "us-east-1"
 }
+
 ## Resource to provision public key
 resource "aws_key_pair" "deployer-key" {
   key_name   = "deployer-key"
@@ -60,7 +67,7 @@ resource "aws_instance" "web" {
   key_name = "${aws_key_pair.deployer-key.key_name}"
   security_groups = ["${aws_security_group.main.id}"]
   subnet_id = "${aws_subnet.main.id}"
-   tags {
+   tags = {
       Name = "Test-AMI"
        }
 }
