@@ -16,7 +16,7 @@ provider "aws" {
 ## Resource to provision public key
 resource "aws_key_pair" "deployer-key" {
   key_name   = "deployer-key"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDeAtrDmLzZanOkCSKEllHLf2fwk+7tTc51ddA5J0cXJwIoaCtysOUbuGP85q0bqWmadZ7nC+xx+CLsgoukondCxVmKN5DT1Ni2bwwPmShFeoMUpw6ho+slgQdnl+SD9dO0AQsCpNW7VjGPcSueG06n4rQM+3IRjzbKAUh0HGQAVLNlkjJf0p+szuzieREjoHafdFZLVRwaT1LE5LlS+tCDoiD0IEHdjUpT0Qq6hDY0DO+UqP6JYyu/XnpDH7tDjayDkMXnrXl4hxpsEEBdUUOksqmbw3rL8At9RCRdfKBtSzytXHS8O26TGGlpYbodHDFx+9CcHkcPQMJKWa2YfnBn root@ip-172-31-30-37.ec2.internal"
+  public_key = "<ssh-keygen>"
                  ##this key is generated using "#ssh-keygen"
 }
 ## Resource to provision VPC 
