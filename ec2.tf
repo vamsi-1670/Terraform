@@ -8,8 +8,8 @@
 ##}
 
 provider "aws" {
-  access_key = ""
-  secret_key = ""
+  access_key = "AKIATYJ2LRBUDYX3LF6B"
+  secret_key = "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"
   region = "us-east-1"
 }
 
